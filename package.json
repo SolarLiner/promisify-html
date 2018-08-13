@@ -5,6 +5,15 @@
   "main": "index.js",
   "author": "Nathan Graule",
   "license": "MIT",
+  "keywords": [
+    "dom",
+    "html",
+    "window",
+    "document",
+    "element",
+    "events",
+    "promise"
+  ],
   "private": false,
   "devDependencies": {
     "@types/jest": "^23.3.1",
