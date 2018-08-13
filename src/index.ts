@@ -3,7 +3,7 @@ type HTMLEventMap = WindowEventMap | HTMLElementEventMap;
 function eventPromise<K extends keyof HTMLEventMap>(
   this: Window | HTMLElement,
   event: K,
-  options: AddEventListenerOptions
+  options?: AddEventListenerOptions
 ) {
   type ActualEvent = HTMLEventMap[K];
   return new Promise<ActualEvent>((resolve, reject) => {
@@ -18,14 +18,14 @@ function eventPromise<K extends keyof HTMLEventMap>(
 
 Window.prototype.on = function<K extends keyof WindowEventMap>(
   event: K,
-  options: AddEventListenerOptions
+  options?: AddEventListenerOptions
 ) {
   return eventPromise.call(this, event, options);
 };
 
 HTMLElement.prototype.on = function <K extends keyof HTMLElementEventMap>(
   event: K,
-  options: AddEventListenerOptions
+  options?: AddEventListenerOptions
 ) {
   return eventPromise.call(this, event, options);
 }
