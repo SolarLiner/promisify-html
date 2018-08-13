@@ -1,0 +1,41 @@
+image: node:latest
+
+stages:
+  - test
+  - build
+  - publish
+
+cache:
+  paths:
+    - .yarn-cache
+    - node_modules
+
+before_script:
+  - yarn install -s --pure-lockfile --cache-folder .yarn-cache
+
+test:
+  script:
+    - yarn test
+
+build:
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - dist
+
+publish:
+  only:
+    - master
+  before_script:
+    - npm login --registry //registry.npmjs.com/:_authToken=$NPM_TOKEN
+  script:
+    - npm publish
+
+publish:nightly:
+  only:
+    - develop
+  before_script:
+    - npm login --registry //registry.npmjs.com/:_authToken=$NPM_TOKEN
+  script:
+    - npm publish --tag next
