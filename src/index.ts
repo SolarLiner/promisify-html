@@ -23,18 +23,18 @@ Window.prototype.on = function<K extends keyof WindowEventMap>(
   return eventPromise.call(this, event, options);
 };
 
-Document.prototype.on = function <K extends keyof DocumentEventMap>(
+Document.prototype.on = function<K extends keyof DocumentEventMap>(
   event: K,
   options?: AddEventListenerOptions
 ) {
   return eventPromise.call(this, event, options);
-}
+};
 
-HTMLElement.prototype.on = function <K extends keyof HTMLElementEventMap>(
+HTMLElement.prototype.on = function<K extends keyof HTMLElementEventMap>(
   event: K,
   options?: AddEventListenerOptions
 ) {
   return eventPromise.call(this, event, options);
-}
+};
 
 document.createElement("p").addEventListener("load", console.log);
