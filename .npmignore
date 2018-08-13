@@ -1,5 +1,8 @@
-yarn.lock
-.gitignore
-jest.config.js
 .editorconfig
 .eslintrc.yml
+.gitignore
+.vscode
+jest.config.js
+src
+tsconfig.json
+yarn.lock
