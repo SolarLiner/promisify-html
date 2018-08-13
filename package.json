@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Use promises for one-time bindings to Window/Document/Element events",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "author": "Nathan Graule",
   "license": "MIT",
   "keywords": [
