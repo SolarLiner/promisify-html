@@ -14,10 +14,12 @@ before_script:
   - yarn install -s --pure-lockfile --cache-folder .yarn-cache
 
 test:
+  stage: test
   script:
     - yarn test
 
 build:
+  stage: build
   script:
     - yarn build
   artifacts:
@@ -25,6 +27,7 @@ build:
       - dist
 
 publish:
+  stage: publish
   only:
     - master
   before_script:
@@ -33,6 +36,7 @@ publish:
     - npm publish
 
 publish:nightly:
+  stage: publish
   only:
     - develop
   before_script:
