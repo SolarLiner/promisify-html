@@ -1,0 +1,14 @@
+{
+  "name": "promisify-html",
+  "version": "0.1.0",
+  "description": "Use promises for one-time bindings to HTML Element Events",
+  "main": "index.js",
+  "author": "Nathan Graule",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "eslint-plugin-typescript": "^0.12.0",
+    "typescript": "^3.0.1",
+    "typescript-eslint-parser": "^18.0.0"
+  }
+}
