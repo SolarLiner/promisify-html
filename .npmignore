@@ -1,6 +1,9 @@
 .editorconfig
 .eslintrc.yml
 .gitignore
+.vscode
 .yarn-cache
 jest.config.js
+src
+tsconfig.json
 yarn.lock
