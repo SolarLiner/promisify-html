@@ -1,11 +1,15 @@
 {
   "name": "promisify-html",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Use promises for one-time bindings to Window/Document/Element events",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Nathan Graule",
   "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/SolarLiner/promisify-html"
+  },
   "keywords": [
     "dom",
     "html",
