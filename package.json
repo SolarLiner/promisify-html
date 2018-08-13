@@ -1,7 +1,7 @@
 {
   "name": "promisify-html",
   "version": "0.1.0",
-  "description": "Use promises for one-time bindings to HTML Element Events",
+  "description": "Use promises for one-time bindings to Window/Document/Element events",
   "main": "index.js",
   "author": "Nathan Graule",
   "license": "MIT",
