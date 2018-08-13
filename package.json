@@ -6,6 +6,10 @@
   "types": "./dist/index.d.ts",
   "author": "Nathan Graule",
   "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/SolarLiner/promisify-html"
+  },
   "keywords": [
     "dom",
     "html",
