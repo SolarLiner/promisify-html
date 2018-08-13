@@ -1,7 +1,7 @@
 type HTMLEventMap = WindowEventMap | DocumentEventMap | HTMLElementEventMap;
 
 function eventPromise<K extends keyof HTMLEventMap>(
-  this: Window | HTMLElement,
+  this: Window | Document | HTMLElement,
   event: K,
   options?: AddEventListenerOptions
 ) {
