@@ -6,8 +6,8 @@
 
 **How**:
 
-[ ] I am working based off of `develop`
-[ ] I have rebased my PR off of `develop`
-[ ] Status checks are green
-  [ ] My PR builds
-  [ ] My PR passes tests
+- [ ] I am working based off of `develop`
+- [ ] I have rebased my PR off of `develop`
+- [ ] Status checks are green
+  - [ ] My PR builds
+  - [ ] My PR passes tests
