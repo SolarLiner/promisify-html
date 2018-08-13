@@ -71,3 +71,6 @@ typings/
 
 # Serverless directories
 .serverless
+
+# TypeScript build dir
+dist
