@@ -1,4 +1,4 @@
-type HTMLEventMap = WindowEventMap | HTMLElementEventMap;
+type HTMLEventMap = WindowEventMap | DocumentEventMap | HTMLElementEventMap;
 
 function eventPromise<K extends keyof HTMLEventMap>(
   this: Window | HTMLElement,
@@ -22,6 +22,13 @@ Window.prototype.on = function<K extends keyof WindowEventMap>(
 ) {
   return eventPromise.call(this, event, options);
 };
+
+Document.prototype.on = function <K extends keyof DocumentEventMap>(
+  event: K,
+  options?: AddEventListenerOptions
+) {
+  return eventPromise.call(this, event, options);
+}
 
 HTMLElement.prototype.on = function <K extends keyof HTMLElementEventMap>(
   event: K,
